@@ -15,11 +15,11 @@ O projeto Scrapy-Adorocinema foi desenvolvido a fim de realizar a extração de 
 São extraídas todas as notas de todos os filmes presentes na página, incluindo os que estão em cartaz. Com essas notas obteve-se a quantidade de filmes e a nota média de todos os filmes.
 
 ### Expressão regular
-A expressão abaixo foi utilizada para extrair textos que são iniciados por >, seguido por um número de 0 a 5, seguido por uma vírgula, seguido por um número de 0 a 9 e finalizadas com <. Dessa forma foi possível extrair apenas as notas dos filmes utilizando apenas uma expressão regular. Exemplo: 3,2
+A expressão abaixo foi utilizada para extrair textos que são iniciados por >, seguido por um número de 0 a 5, seguido por uma vírgula, seguido por um número de 0 a 9 e finalizadas com <. Dessa forma foi possível extrair as notas dos filmes utilizando apenas uma expressão regular. Exemplo: 3,2
 
     >([0-5]{1},{1}[0-9]{1})<
 
-A próxima expressão foi utilizada apenas para saber se existe uma página posterior.
+A próxima foi utilizada para saber se existe uma página posterior.
     
     Próxima
 
