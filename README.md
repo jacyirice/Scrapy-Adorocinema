@@ -30,7 +30,7 @@ O software consiste em um projeto scrapy que utiliza uma [spyder](https://docs.s
 1. Gera a primeira requisição para as urls iniciais, no caso [essa](https://www.adorocinema.com/filmes/melhores/), e a resposta é enviada para um método especificado;
 2. Analisa as informações recebidas utilizando as expressões regulares e então gera itens com os dados analisados;
 3. Os itens passam por um pipeline para limpeza de dados HTML, validar dados extraídos e calcular a média;
-4. Verifique se existe uma página seguinte. Se a página existir, então é feito o mesmo processo para as outras páginas.
+4. Verifica se existe uma página seguinte. Se a página existir, então é feito o mesmo processo para as outras páginas.
 
 ---
 
