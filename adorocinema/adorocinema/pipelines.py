@@ -14,7 +14,7 @@ class AdorocinemaPipeline:
         adapter = ItemAdapter(item)
         if adapter.get('all_notes'):
             adapter['all_notes'] = [
-                float(i[1:-1].replace(',', '.')) for i in adapter['all_notes']]
+                float(i.replace(',', '.')) for i in adapter['all_notes']]
             adapter['average'] = round(sum(adapter['all_notes'])/adapter['total_films'],1)
             return item
         else:
