@@ -6,8 +6,15 @@
 
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
+from scrapy.exceptions import DropItem
 
 
 class AdorocinemaPipeline:
     def process_item(self, item, spider):
-        return item
+        adapter = ItemAdapter(item)
+        if adapter.get('all_notes'):
+            adapter['all_notes'] = [
+                float(i[1:-1].replace(',', '.')) for i in adapter['all_notes']]
+            return item
+        else:
+            raise DropItem(f"Missing all_notes in {item}")
